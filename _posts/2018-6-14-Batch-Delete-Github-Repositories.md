@@ -2,7 +2,7 @@
 
 ------
 
-Github的Repositories在删除的时候需要输入Repositories的名称以减少误删除,对于fork了大量仓库的人来说删除大量仓库简直就是一个噩梦.
+Github的Repositories在删除的时候需要输入Repositories的名称以减少误删除,对于fork了大量仓库的人来说删除它们简直就是一个噩梦.
 
 于是我就开始寻找批量删除方案,只找到了一个 [https://github.com/l294265421/deletegithubproject]
 
@@ -16,12 +16,12 @@ Github的Repositories在删除的时候需要输入Repositories的名称以减�
 
 ------
 进入主题
-###1 安装Python和pip
+1 安装Python和pip
 
 参考链接: https://blog.csdn.net/lengqi0101/article/details/61921399/
-###2 使用pip安装PyGitHub
+2 使用pip安装PyGitHub
 参考链接: https://pygithub.readthedocs.io/en/latest/introduction.html
-###3 代码
+3 代码
 新建git.py,输入以下内容,使用python运行
 ```python
 from github import Github
@@ -30,7 +30,7 @@ for repo in g.get_user().get_repos():
     print(repo.name)
     repo.delete()
 ```
-###4 存在的问题
-如果仓库太多,可能多运行几次
+4 存在的问题
+如果仓库太多,可能需要多运行几次
 
 ~End~
