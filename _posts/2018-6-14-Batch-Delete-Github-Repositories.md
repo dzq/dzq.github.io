@@ -16,11 +16,14 @@ Github的Repositories在删除的时候需要输入Repositories的名称以减�
 
 ------
 进入主题
+
 1 安装Python和pip
 
 参考链接: https://blog.csdn.net/lengqi0101/article/details/61921399/
+
 2 使用pip安装PyGitHub
 参考链接: https://pygithub.readthedocs.io/en/latest/introduction.html
+
 3 代码
 新建git.py,输入以下内容,使用python运行
 ```python
@@ -30,7 +33,13 @@ for repo in g.get_user().get_repos():
     print(repo.name)
     repo.delete()
 ```
+
 4 存在的问题
 如果仓库太多,可能需要多运行几次
+
+参考链接: 
+
+https://pygithub.readthedocs.io/en/latest/introduction.html
+https://pygithub.readthedocs.io/en/latest/apis.html
 
 ~End~
